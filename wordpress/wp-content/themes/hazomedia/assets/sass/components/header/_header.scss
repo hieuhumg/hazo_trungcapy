@@ -1,0 +1,32 @@
+.top-menu {
+	div {
+		.logo {
+			width: 134px;
+			height: 70px;
+		}
+	}
+}
+.menu {
+	ul {
+		li {
+			a {
+				display: inline-block;
+				font-size: 18px;
+				line-height: 1.21;
+				letter-spacing: normal;
+				padding: 30px 35px 31px 0;
+				font-weight: 600;
+				color: $color-content;
+				transition: .3s all ease-in-out;
+				&:hover {
+					color: var(--color-blue);
+				}
+			}
+		}
+		li.active {
+			a {
+				color: var(--color-blue);
+			}
+		}
+	}
+}

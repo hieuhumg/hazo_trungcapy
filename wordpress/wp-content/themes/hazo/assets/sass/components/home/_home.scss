@@ -1,0 +1,486 @@
+//banner
+.banner {
+	.item {
+		height: 475px;
+		background-size: cover !important;
+		.banner_title {
+			background: #39393999;
+			padding: 20px;
+			div {
+				h3 {
+					font-size: 20px;
+					color: $color_white;
+					margin-bottom: 15px;
+					font-weight: 600;
+				}
+				p {
+					color: $color_white;
+				}
+			}
+		}
+	}
+}
+
+.site-slider{
+	display: none;
+	.item{
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position:center center;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		&:before{
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background:rgba(2,2,2,0.3);
+		}
+		.text{
+			max-width: 650px;
+			margin:0 auto;
+			text-align: center;
+			position: relative;
+			z-index: 9;
+			h2{
+				font-size: 70px;
+				font-weight: bold;
+				color: #fff;
+				position: relative;
+				left: -700px;
+				transition-delay: 0.25s;
+				transform:rotate(-90deg);
+			}
+			p{
+				margin:10px 0px 20px 0px;
+				font-size: 18px;
+				color: #fff;
+				line-height: 1.5;
+				position: relative;
+				right: -700px;
+				transition-delay: 0.5s;
+			}
+			.btn-more{
+				position: relative;
+				bottom:-600px;
+				transition-delay: 0.75s;
+				transform:rotate(90deg);
+			}
+			.animation{
+				transition: all .3s;
+				transition-duration: 1.5s;
+				opacity: 0;
+			}
+		}
+	}
+	.owl-carousel.owl-drag{
+		.active{
+			.animation{
+				position: relative;
+				-webkit-animation: fadeIn 0.5s linear;
+				animation: fadeIn 0.5s linear;
+				opacity: 1;
+				transition-duration: 1.5s;
+				&--h2{
+					left: 0;
+					transform:rotate(0deg);
+				}
+				&--p{
+					right: 0;
+				}
+				&--btn{
+					bottom:0;
+					transform:rotate(0deg);
+				}
+			}
+		}
+	}
+	.owl-theme .owl-nav.disabled+.owl-dots{
+		position: absolute;
+		bottom:20px;
+		left: 50%;
+		transform:translate(-50%,0);
+	}
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.teaching-staff {
+	.element {
+
+	}
+}
+.heading-title {
+	margin-bottom: $size-20;
+	.title {
+		text-align: center;
+		h3 {
+			font-size: $fz-35;
+			font-weight: 600;
+			margin: 0 2rem;
+			font-size: $size-35;
+			color: $color-title;
+			@media screen and (max-width: $break-mobile) {
+				font-size: 25px;
+			}
+		}
+	}
+	img {
+		width: 3.125rem;
+	}
+}
+.heading-content {
+	p {
+		color: $color-content;
+		line-height: 1.8;
+		font-weight: 600;
+	}
+	@media screen and (min-width: 1200px) {
+		padding-left: 85px;
+		padding-right: 85px;
+	}
+}
+
+//Nội dung đào tạo
+.program {
+	margin: 20px -20px;
+	.item {
+		width: 240px;
+		height: 240px;
+		border: 1px solid #F0F0F0;
+		border-radius: 50%;
+		position: relative;
+		transition: all .5s ease 0s;
+		padding: $size-25;
+		margin: 10px 40px;
+		&:hover {
+			background-color: #008ad1;
+			.title, .content {
+				color: #fff;
+			}
+		}
+		.title {
+			font-size: 3.75rem;
+			color: #008ad1;
+			//margin-bottom: $size-20;
+			font-weight: bold;
+			line-height: 1.5;
+		}
+		.content {
+			color: $color-content;
+			line-height: 1.5;
+		}
+	}
+}
+
+.educate {
+	.item {
+		padding: 30px;
+		border-radius: 20px;
+		background-color: #f5f5f5;
+		transition: all .5s ease 0s;
+		color: #008ad1;
+		margin: 30px 0;
+		text-align: center;
+		@media screen and (max-width: $break-mobile) {
+			margin: 15px 0;
+		}
+		&:hover {
+			background-color: #008ad1;
+			.title {
+				a {
+					color: $color_white;
+				}
+			}
+			.content {
+				color: $color_white;
+			}
+			.btn-readmore {
+				color: var(--color-blue) !important;
+				background: $color_white;
+			}
+		}
+		img {
+			border-radius: 20px;
+
+		}
+		.title {
+			margin: $size-20 0;
+			a {
+				font-size: $size-22;
+				color: var(--color-blue);
+				font-weight: 600;
+			}
+		}
+		.content {
+			color: $color-content;
+			line-height: 1.7;
+			margin-bottom: $size-20;
+		}
+	}
+}
+
+//đội ngũ giảng viên
+.lecturer {
+	.lecturer-items {
+
+		.item {
+			-webkit-box-flex: 0;
+			-ms-flex: 0 0 calc(20% - 80px);
+			flex: 0 0 calc(20% - 80px);
+			cursor: pointer;
+			margin: 20px 40px;
+			height: 100%;
+			@media screen and (max-width: $break-mobile) {
+				flex: 0 0 calc(50% - 40px);
+				margin: 20px 20px;
+			}
+			&:hover {
+				.lecturer-thumb {
+					-webkit-box-shadow: 0px 5px 20px -8px #000;
+					box-shadow: 0px 5px 20px -8px #000;
+					-webkit-transform: translateY(-2px);
+					-ms-transform: translateY(-2px);
+					transform: translateY(-2px);
+				}
+			}
+			.lecturer-thumb {
+				border-radius: 50%;
+				height: 100px;
+				width: 100px;
+				margin: auto;
+				overflow: hidden;
+				transition: all .3s ease-in-out;
+
+			}
+			.lecturer-title {
+				font-size: $size-16;
+				color: $color-content;
+				line-height: 1.23;
+				margin-top: 20px;
+				font-weight: 600;
+				text-align: center;
+			}
+		}
+	}
+	.lecturer-custom {
+		color: var(--color-blue) !important;
+		background: #f5f5f5;
+		margin-top: $size-20;
+		&:hover {
+			background: var(--color-blue);
+			color: $color_white !important;
+		}
+	}
+}
+
+//Đối tác
+.partner {
+	.partner-list {
+		margin-top: 55px;
+		.item {
+			img {
+				border-radius: 20px;
+				border: 1px solid #DEDEDE;
+				transition: all .3s ease 0s;
+				width: 100%;
+				&:hover {
+					transform: translateY(-2px);
+					box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+				}
+			}
+		}
+		.slick-slide {
+			margin-right:10px;
+			margin-left:10px;
+		}
+		.slick-prev:before, .slick-next:before {
+			font-size: 40px;
+			color: $color-content;
+			background: $color_white;
+			transition: .3s ease-in-out;
+
+		}
+		.slick-prev, .slick-next {
+			height: 45px;
+			width: 45px;
+			z-index: 1;
+			&:hover {
+				&:before {
+					background: var(--color-blue) !important;
+					color: $color_white !important;
+				}
+
+			}
+		}
+	}
+	.partner-des {
+		text-align: center;
+		ine-height: 1.5;
+		font-size: 24px;
+		color: $color-content;
+	}
+}
+
+//tin tức
+.news {
+	.nav-tabs {
+		border-bottom: none;
+		margin: 30px 0;
+		li.nav-item {
+			a {
+				cursor: pointer;
+				display: inline-block;
+				background-color: #f5f5f5;
+				border-radius: 30px;
+				font-size: 16px;
+				line-height: 1.29;
+				font-weight: 600;
+				color: #008ad1;
+				//width: 155px;
+				padding: 12px 20px;
+				transition: all .3s ease 0s;
+				margin-right: 16px;
+				margin-bottom: 20px;
+				border: none;
+			}
+			a.active {
+				background: #008ad1;
+				color: $color_white;
+			}
+		}
+	}
+	.tab-features {
+		margin: 30px;
+		.tab-pane {
+			.item {
+				border-radius: 20px;
+				overflow: hidden;
+				@media screen and (max-width: $break-mobile) {
+					margin-bottom: 30px;
+				}
+				&:hover {
+					.down {
+						top: 0;
+						opacity: 1;
+					}
+				}
+				.image {
+
+					height: 250px;
+				}
+				.title {
+					background: #008ad1;
+					padding: 20px;
+					text-align: center;
+					a {
+						font-size: 16px;
+						font-weight: 600;
+						color: #fff;
+						line-height: 1.54;
+						text-transform: uppercase;
+					}
+
+				}
+				.down {
+					background-size: cover !important;
+					height: 100%;
+					width: 100%;
+					left: 0;
+					top: 50%;
+					opacity: 0;
+					transition: .6s ease-in-out;
+					padding: 20px;
+					z-index: 1;
+					.title {
+						background: none;
+					}
+					.content {
+						font-size: $size-16;
+						line-height: 1.5;
+						color: $color_white;
+					}
+				}
+			}
+		}
+	}
+}
+
+//giới thiệu
+.contact-element {
+	.content {
+		h3 {
+			font-size: 24px;
+			line-height: 1.58;
+			color: $color-content;
+			font-weight: 500;
+			margin-bottom: 35px;
+		}
+		p {
+			color: $color-content;
+			margin-bottom: 30px;
+			font-size: 18px;
+		}
+	}
+}
+
+//Liên hệ
+.question {
+	.question_element {
+		background: #f2f2f2;
+		padding: 30px;
+		.title {
+			h3 {
+				font-size: 24px;
+				font-weight: 600;
+				line-height: 1.58;
+				color: #008ad1;
+				margin-bottom: 15px;
+			}
+			p {
+				margin-bottom: 15px;
+			}
+			.form-control {
+				height: 40px;
+			}
+			.input-form {
+				margin-bottom: 20px;
+				p {
+					margin-bottom: 5px;
+				}
+			}
+			textarea {
+				height: 80px !important;
+			}
+
+		}
+		.submit {
+			font-family: "UTMFacebookR";
+			padding: 0;
+			font-size: 18px;
+			font-weight: 600;
+			height: auto;
+			width: auto;
+			margin-bottom: 0;
+			background-color: transparent;
+			color: #008ad1;
+		}
+	}
+}
+.banner-quangcao {
+	@media screen and (max-width: $break-mobile) {
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+}

@@ -1,0 +1,71 @@
+.pages , .page-numbers{
+	margin-top: 20px;
+	text-align: center;
+	ul{
+		li{
+			display: inline-block;
+			padding:0px 2.5px;
+			a{
+				display: block;
+				font-size: 14px;				
+				text-align: center;
+				padding:7px 15px;
+				border:1px solid #ddd;
+				color: #465363;
+				&:hover{
+					border:1px solid var(--color-blue);
+					background-color: var(--color-blue);
+					color: white;
+				}
+			}
+		}
+		.active{
+			a{
+				border:1px solid var(--color-blue);
+				background-color: var(--color-blue);
+				color: white;
+			}
+		}
+	}
+}
+.list-content-products{
+	.woocommerce-pagination{
+		ul{
+			margin-top: 20px;
+			text-align: center;
+			border:0 !important;
+			li{
+				display: inline-block;
+				padding:0px 2.5px !important;
+				border:0 !important;
+				a, span{
+					display: block !important;
+					font-size: 14px !important;				
+					text-align: center !important;
+					padding:7px 15px !important;
+					border:1px solid #ddd !important;
+					color: #465363 !important;
+					&:hover{
+						border:1px solid var(--color-blue) !important;
+						background-color: var(--color-blue) !important;
+						color: white !important;
+					}
+				}
+				.current{
+					border:1px solid var(--color-blue) !important;
+					background-color: var(--color-blue) !important;
+					color: white !important;
+				}
+			}
+			.active{
+				a{
+					border:1px solid var(--color-blue) !important;
+					background-color: var(--color-blue) !important;
+					color: white !important;
+				}
+			}
+		}
+	}
+}
+
+
