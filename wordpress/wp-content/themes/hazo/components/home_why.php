@@ -18,7 +18,6 @@
            <?php endif; ?>
            <?php
            if (have_rows('index')) :
-
                          ?>
                       <div class="program d-flex flex-wrap justify-content-center m-50">
                              <?php while (have_rows('index')) : the_row(); ?>

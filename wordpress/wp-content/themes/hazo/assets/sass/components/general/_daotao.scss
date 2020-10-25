@@ -126,9 +126,13 @@
 
 .content-box {
   ul {
+    list-style: decimal;
+    padding-left: 40px;
+    background: #f8f8f8;
     li {
       span {
         margin-right: 15px;
+        display: none;
       }
 
       text-align: initial;
